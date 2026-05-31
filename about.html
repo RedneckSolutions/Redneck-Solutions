@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Redneck Solutions, a family-owned consulting and solutions business owned by Tyler Webb and Laurel Webb, offering practical business help for operations, marketing, finances, HR, payroll, accounting, and more." />
+  <title>About Redneck Solutions | Tyler Webb & Laurel Webb</title>
+  <style>
+    :root {
+      --bg: #11100d;
+      --bg-2: #1c1914;
+      --card: #262016;
+      --tan: #f3dfba;
+      --muted: #c8b58d;
+      --orange: #d96f28;
+      --yellow: #f0b84d;
+      --green: #6f8f3d;
+      --red: #9e3222;
+      --line: rgba(243, 223, 186, 0.18);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--tan);
+      background:
+        radial-gradient(circle at top left, rgba(217, 111, 40, 0.22), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(111, 143, 61, 0.22), transparent 30rem),
+        linear-gradient(135deg, #0d0c0a, var(--bg));
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(17, 16, 13, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #1a1208;
+      background: linear-gradient(135deg, var(--yellow), var(--orange));
+      border: 2px solid rgba(243, 223, 186, 0.7);
+      box-shadow: 0 8px 22px rgba(217, 111, 40, 0.35);
+      font-family: Arial, sans-serif;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--tan); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(243, 223, 186, 0.24);
+      background: rgba(243, 223, 186, 0.08);
+      color: var(--tan);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); background: rgba(243, 223, 186, 0.14); }
+    .btn.primary { background: linear-gradient(135deg, var(--yellow), var(--orange)); color: #18100a; border: 0; }
+
+    .page-hero {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 86px 0 48px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(243, 223, 186, 0.06);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1, h2, h3 { line-height: 1.05; margin: 0; }
+
+    h1 {
+      margin-top: 20px;
+      font-size: clamp(3rem, 7vw, 6.3rem);
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      margin: 22px 0 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(243, 223, 186, 0.08), rgba(243, 223, 186, 0.03)),
+        var(--bg-2);
+      border-radius: 32px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .stat {
+      min-height: 150px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(17, 16, 13, 0.68);
+      border: 1px solid rgba(243,223,186,.14);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1;
+      color: var(--yellow);
+    }
+
+    .stat span {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-head p {
+      max-width: 540px;
+      color: var(--muted);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .story-card {
+      border-radius: 34px;
+      padding: clamp(24px, 5vw, 44px);
+      background:
+        radial-gradient(circle at top right, rgba(240,184,77,.20), transparent 24rem),
+        #18140f;
+      border: 1px solid rgba(243,223,186,.22);
+      box-shadow: var(--shadow);
+    }
+
+    .story-card p {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 1.08rem;
+      max-width: 930px;
+    }
+
+    .story-card p:first-of-type {
+      color: var(--tan);
+      font-size: 1.22rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .profile-card {
+      border: 1px solid var(--line);
+      background: rgba(38, 32, 22, 0.78);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card:before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: rgba(217, 111, 40, 0.18);
+    }
+
+    .profile-card > * { position: relative; }
+
+    .profile-card h3 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      text-transform: uppercase;
+      letter-spacing: -0.035em;
+      margin-bottom: 12px;
+    }
+
+    .profile-card p,
+    .profile-card li {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .profile-card ul {
+      padding-left: 18px;
+      margin: 16px 0 0;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(243, 223, 186, 0.08);
+      border: 1px solid rgba(243, 223, 186, 0.14);
+      color: var(--tan);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .value-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(17, 16, 13, 0.66);
+      border: 1px solid var(--line);
+    }
+
+    .value-card h3 {
+      color: #ffe9bf;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.94rem;
+      margin-bottom: 0;
+    }
+
+    .contact-panel {
+      border-radius: 34px;
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(111,143,61,.28), rgba(217,111,40,.18)),
+        #18140f;
+      border: 1px solid rgba(243,223,186,.22);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      text-transform: uppercase;
+      letter-spacing: -0.045em;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    .mobile-toggle { display: none; }
+
+    @media (max-width: 900px) {
+      .page-hero, .grid-2, .contact-panel { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 16px;
+        right: 16px;
+        padding: 16px;
+        border-radius: 18px;
+        background: rgba(17,16,13,.96);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-links.open { display: flex; }
+      .mobile-toggle {
+        display: inline-flex;
+        background: rgba(243, 223, 186, 0.08);
+        color: var(--tan);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-weight: 900;
+      }
+      .page-hero { padding-top: 48px; }
+    }
+
+    @media (max-width: 560px) {
+      .stat-grid, .values-grid { grid-template-columns: 1fr; }
+      .contact-panel { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Redneck Solutions home">
+        <span class="brand-mark">RS</span>
+        <span>Redneck Solutions</span>
+      </a>
+      <button class="mobile-toggle" id="menuToggle" aria-label="Open menu">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#ibc">IBC Recycling</a>
+        <a class="btn primary" href="mailto:rdnksolutions@gmail.com?subject=Redneck%20Solutions%20Inquiry">Get Help</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <span class="eyebrow">Family-owned • practical consulting • real-world fixes</span>
+        <h1>Built to solve the problems nobody else wants to touch.</h1>
+        <p class="lead">
+          Redneck Solutions is a family-owned and operated consulting and solutions business owned by
+          Tyler Webb and Laurel Webb. We help businesses find practical answers for finances, marketing,
+          operations, cost reduction, streamlining, systems, and everyday problems that are costing time,
+          money, and sanity.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:rdnksolutions@gmail.com?subject=Business%20Consulting%20Inquiry">Work With Us</a>
+          <a class="btn" href="index.html#ibc">Redneck IBC Recycling</a>
+        </div>
+      </div>
+
+      <aside class="stat-card" aria-label="Redneck Solutions experience highlights">
+        <div class="stat-grid">
+          <div class="stat">
+            <strong>13</strong>
+            <span>Tyler started his first lawn care business at 13 years old.</span>
+          </div>
+          <div class="stat">
+            <strong>10+</strong>
+            <span>Years of Laurel’s experience across web, marketing, software, HR, payroll, accounting, and finances.</span>
+          </div>
+          <div class="stat">
+            <strong>Many</strong>
+            <span>Industries touched: lawn care, pressure washing, trucking, consulting, digital work, and operations.</span>
+          </div>
+          <div class="stat">
+            <strong>1</strong>
+            <span>Main goal: help you fix what is broken and build what works.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="story-card">
+        <span class="eyebrow">Our story</span>
+        <p>
+          Redneck Solutions was created for business owners who need straight answers, useful strategy,
+          and problem-solving that works outside of a boardroom.
+        </p>
+        <p>
+          We know most business problems are not neat, pretty, or perfectly labeled. Sometimes the issue is cash flow.
+          Sometimes it is marketing. Sometimes it is a messy process, bad pricing, wasted labor, poor systems, inventory
+          confusion, or the simple fact that nobody has stepped back far enough to see the whole picture.
+        </p>
+        <p>
+          That is where we come in. Tyler brings hands-on entrepreneurial experience from starting, running, and growing
+          real businesses. Laurel brings experience in web development, marketing, software development, HR, payroll,
+          accounting, and finances. Together, we combine practical field experience with digital, operational, and financial
+          strategy to help businesses clean up the chaos and move forward.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Meet The Owners</h2>
+        <p>Different strengths, same mission: find the problem, build the fix, and make it usable in real life.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="profile-card">
+          <h3>Tyler Webb</h3>
+          <p>
+            Tyler is an entrepreneur who has started, operated, and successfully run multiple businesses,
+            including pressure washing, lawn care, trucking, and consulting. His business experience started
+            early when he launched his first lawn care business at just 13 years old.
+          </p>
+          <p>
+            Tyler brings the hands-on side of Redneck Solutions: practical operations, logistics, service-based
+            business experience, equipment thinking, workflow problem-solving, and the kind of real-world judgment
+            you only get from actually doing the work.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Entrepreneurship</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Trucking</span>
+            <span class="tag">Lawn Care</span>
+            <span class="tag">Pressure Washing</span>
+            <span class="tag">Consulting</span>
+          </div>
+        </article>
+
+        <article class="profile-card">
+          <h3>Laurel Webb</h3>
+          <p>
+            Laurel has 10 years of experience across web development, marketing, software development, HR,
+            payroll, accounting, and finances. She brings the systems, structure, digital strategy, organization,
+            and business cleanup side of Redneck Solutions.
+          </p>
+          <p>
+            Her strength is seeing the messy middle of a business and turning it into something clearer, cleaner,
+            and easier to run — whether that means improving a website, organizing finances, cleaning up processes,
+            creating better messaging, or building systems that stop the same problems from repeating.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Web Development</span>
+            <span class="tag">Marketing</span>
+            <span class="tag">Software</span>
+            <span class="tag">HR</span>
+            <span class="tag">Payroll</span>
+            <span class="tag">Accounting</span>
+            <span class="tag">Finances</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>What We Believe</h2>
+        <p>Business help should be useful, understandable, and built for the way real people actually operate.</p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <h3>No Fluff</h3>
+          <p>We are not here to bury you in fancy words. We are here to help you fix the problem.</p>
+        </article>
+        <article class="value-card">
+          <h3>Real Solutions</h3>
+          <p>Advice is only good if it works after the meeting ends and real life starts kicking again.</p>
+        </article>
+        <article class="value-card">
+          <h3>Smart Systems</h3>
+          <p>Better systems save time, reduce stress, and help your business stop bleeding money in weird places.</p>
+        </article>
+        <article class="value-card">
+          <h3>Family-Owned</h3>
+          <p>We care about helping businesses survive, grow, and support the people depending on them.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="contact-panel">
+        <div>
+          <h2>Bring us the mess.</h2>
+          <p>Tell us what is broken, what you want fixed, and what you have already tried. We will help you find the next right move.</p>
+        </div>
+        <a class="btn primary" href="mailto:rdnksolutions@gmail.com?subject=Redneck%20Solutions%20Consulting%20Inquiry&body=Tell%20us%20what%20business%20problem%20you%20need%20help%20solving%3A%0A%0A">Email Redneck Solutions</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Redneck Solutions. All rights reserved.</span>
+      <span>Owned and operated by Tyler Webb & Laurel Webb</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const year = document.getElementById('year');
+
+    year.textContent = new Date().getFullYear();
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
