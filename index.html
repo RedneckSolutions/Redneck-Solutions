@@ -3,121 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Redneck Solutions provides practical business consulting and solutions for finances, marketing, operations, cost reduction, streamlining, and problem solving." />
-  <title>Redneck Solutions | Business Consulting & Practical Solutions</title>
+
+  <meta
+    name="description"
+    content="Redneck Solutions provides practical business consulting and solutions for finances, marketing, operations, cost reduction, streamlining, HR, payroll, accounting, and real-world problem solving."
+  />
+
+  <title>Redneck Solutions | Practical Solutions. Real Results.</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header">
-  <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="index.html" aria-label="Redneck Solutions home">
-      <img src="images/redneck-solutions-logo.png" alt="Redneck Solutions logo" />
-      <span>Redneck Solutions<small>Consulting & Solutions</small></span>
-    </a>
-    <button class="mobile-toggle" id="menuToggle" aria-label="Open menu">Menu</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a class="btn primary" href="contact.html">Contact Us</a>
-    </div>
-  </nav>
-</header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Redneck Solutions home">
+        <img src="images/rs-logo.png" alt="Redneck Solutions logo" />
+        <span>
+          Redneck Solutions
+          <small>Consulting & Solutions</small>
+        </span>
+      </a>
+
+      <button class="mobile-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        Menu
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="about.html">About</a>
+        <a class="btn primary" href="contact.html">Contact Us</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <section class="hero">
-      <div>
-        <span class="eyebrow">Family-owned consulting • Real-world problem solving</span>
-        <h1>Business problems meet their <span class="pink">match.</span></h1>
+      <div class="hero-copy">
+        <span class="eyebrow">Family-owned consulting • No fluff • Real fixes</span>
+
+        <h1>
+          Business problems
+          <span>meet their match.</span>
+        </h1>
+
         <p>
-          Redneck Solutions helps businesses clean up the chaos: finances, marketing, operations,
-          cost reduction, streamlining, and practical fixes that actually work in the real world.
+          Redneck Solutions helps businesses clean up the chaos: finances, marketing,
+          operations, cost reduction, streamlining, HR, payroll, accounting, and practical
+          fixes that actually work in the real world.
         </p>
+
         <div class="hero-actions">
-          <a class="btn primary" href="#services">See Services</a>
-          <a class="btn" href="contact.html">Contact Us</a>
+          <a class="btn primary" href="#services">See Our Services</a>
+          <a class="btn ghost" href="contact.html">Contact Us</a>
         </div>
       </div>
 
-      <aside class="logo-card" aria-label="Redneck Solutions logo">
-        <div class="logo-card-inner">
-          <img src="images/redneck-solutions-logo.png" alt="Redneck Solutions logo badge" />
-        </div>
+      <aside class="hero-logo-wrap" aria-label="Redneck Solutions brand logo">
+        <div class="splatter"></div>
+        <img src="images/rs-logo.png" alt="Redneck Solutions logo badge" />
       </aside>
     </section>
 
-    <section id="services">
-      <div class="section-head">
-        <h2>What We <span class="pink">Fix</span></h2>
-        <p>Bring us the messy stuff: money leaks, clunky systems, weak marketing, bad workflows, and business headaches that keep coming back like a raccoon in the trash.</p>
+    <section id="services" class="services-section">
+      <div class="section-head centered">
+        <span class="star-divider">★</span>
+        <h2>What We <span>Fix</span></h2>
+        <p>
+          Bring us the messy stuff: money leaks, clunky systems, weak marketing,
+          bad workflows, business headaches, and anything that keeps coming back
+          like a raccoon in the trash.
+        </p>
       </div>
 
       <div class="grid-3">
-        <article class="card">
+        <article class="service-card">
+          <div class="icon">💲</div>
           <h3>Financial Cleanup</h3>
-          <p>Budget reviews, cash-flow planning, cost tracking, pricing checks, and finding where the money is quietly sneaking out the back door.</p>
+          <p>
+            Budget reviews, cash-flow planning, cost tracking, pricing checks,
+            and finding where the money is quietly sneaking out the back door.
+          </p>
         </article>
-        <article class="card">
+
+        <article class="service-card">
+          <div class="icon">📣</div>
           <h3>Marketing & Sales</h3>
-          <p>Offer cleanup, local advertising ideas, online presence, customer messaging, promotions, and practical ways to get more eyes on what you sell.</p>
+          <p>
+            Offer cleanup, local advertising ideas, online presence, customer messaging,
+            promotions, and practical ways to get more eyes on what you sell.
+          </p>
         </article>
-        <article class="card">
+
+        <article class="service-card">
+          <div class="icon">⚙️</div>
           <h3>Operations & Systems</h3>
-          <p>Streamlining workflows, organizing daily tasks, reducing repeat problems, and building systems your business can actually stick with.</p>
+          <p>
+            Streamlining workflows, organizing daily tasks, reducing repeat problems,
+            and building systems your business can actually stick with.
+          </p>
         </article>
-        <article class="card">
+
+        <article class="service-card">
+          <div class="icon">📉</div>
           <h3>Cost Reduction</h3>
-          <p>We look for waste in supplies, labor, routing, scheduling, inventory, bills, processes, and habits that have been hiding in plain sight.</p>
+          <p>
+            We look for waste in supplies, labor, routing, scheduling, inventory,
+            bills, processes, and habits hiding in plain sight.
+          </p>
         </article>
-        <article class="card">
+
+        <article class="service-card">
+          <div class="icon">👥</div>
           <h3>HR, Payroll & Admin</h3>
-          <p>Support for the behind-the-scenes systems that keep a business running: people, payroll, records, tasks, organization, and office cleanup.</p>
+          <p>
+            Support for the behind-the-scenes systems that keep a business running:
+            people, payroll, records, tasks, organization, and office cleanup.
+          </p>
         </article>
-        <article class="card">
+
+        <article class="service-card">
+          <div class="icon">💡</div>
           <h3>Problem Solving</h3>
-          <p>Vendor issues, messy processes, inventory headaches, customer bottlenecks, startup planning, expansion ideas — bring the ugly stuff.</p>
+          <p>
+            Vendor issues, messy processes, inventory headaches, customer bottlenecks,
+            startup planning, expansion ideas — bring the ugly stuff.
+          </p>
         </article>
       </div>
     </section>
 
-    <section>
+    <section class="feature-section">
       <div class="feature-band">
-        <span class="eyebrow">No fluff. No corporate fog machine.</span>
-        <h2>Practical solutions. <span class="pink">Real results.</span></h2>
+        <span class="eyebrow">Practical Solutions. Real Results.</span>
+
+        <h2>
+          No corporate fog machine.
+          <span>Just answers.</span>
+        </h2>
+
         <p>
-          We are not here to impress you with jargon. We are here to help you make better decisions,
-          waste less time, tighten up operations, and stop duct-taping the same problem every week.
+          We are not here to bury you in jargon or hand you a 47-page report nobody
+          wants to read. We help you find the problem, build the fix, and make it
+          usable in real life.
         </p>
+
         <div class="hero-actions">
           <a class="btn primary" href="about.html">Meet The Owners</a>
-          <a class="btn" href="contact.html">Start A Conversation</a>
+          <a class="btn ghost" href="contact.html">Start A Conversation</a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="process-section">
       <div class="section-head">
-        <h2>How It <span class="pink">Works</span></h2>
-        <p>Simple, direct, and useful. Because business problems do not need a ball gown. They need boots.</p>
+        <h2>How It <span>Works</span></h2>
+        <p>
+          Simple, direct, and useful. Because business problems do not need a ball gown.
+          They need boots.
+        </p>
       </div>
 
       <div class="process">
-        <article class="card">
+        <article class="process-card">
+          <div class="step">01</div>
           <div>
             <h3>Tell us what is broken</h3>
-            <p>Send the problem, the goal, and what you have already tried. Bonus points for brutal honesty.</p>
+            <p>
+              Send the problem, the goal, and what you have already tried.
+              Bonus points for brutal honesty.
+            </p>
           </div>
         </article>
-        <article class="card">
+
+        <article class="process-card">
+          <div class="step">02</div>
           <div>
             <h3>We diagnose the mess</h3>
-            <p>We look at the numbers, process, offer, operations, customers, and weak spots to find the real issue.</p>
+            <p>
+              We look at the numbers, process, offer, operations, customers,
+              and weak spots to find the real issue.
+            </p>
           </div>
         </article>
-        <article class="card">
+
+        <article class="process-card">
+          <div class="step">03</div>
           <div>
             <h3>You get a practical fix</h3>
-            <p>No fancy fog machine. Just clear next steps, better systems, and a plan you can actually use.</p>
+            <p>
+              No fancy fog machine. Just clear next steps, better systems,
+              and a plan you can actually use.
+            </p>
           </div>
         </article>
       </div>
@@ -125,11 +203,12 @@
   </main>
 
   <footer class="footer">
-  <div class="footer-inner">
-    <span>© <span id="year"></span> Redneck Solutions. All rights reserved.</span>
-    <span>Family-owned • Practical consulting • Real solutions</span>
-  </div>
-</footer>
-<script src="script.js"></script>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Redneck Solutions. All rights reserved.</span>
+      <span>Family-owned • Practical consulting • Real solutions</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
