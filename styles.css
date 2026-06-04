@@ -161,7 +161,7 @@ img {
   color: var(--pink);
 }
 
-.nav-links a.active::after,
+.nav-links a.active:not(.btn)::after,
 .nav-links a:not(.btn):hover::after {
   content: "";
   position: absolute;
@@ -184,6 +184,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: auto;
   min-height: 50px;
   padding: 0 22px;
   border-radius: 8px;
@@ -193,6 +194,7 @@ img {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.06em;
+  text-align: center;
   transition: 0.2s ease;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   cursor: pointer;
@@ -310,6 +312,7 @@ h1 span {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 14px;
   margin-top: 28px;
 }
@@ -755,7 +758,7 @@ h1 span {
   font-size: 1rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE TABLET */
 
 @media (max-width: 960px) {
   .hero,
@@ -816,6 +819,8 @@ h1 span {
   }
 }
 
+/* RESPONSIVE MOBILE */
+
 @media (max-width: 620px) {
   .grid-3,
   .values-grid {
@@ -857,12 +862,38 @@ h1 span {
     padding-top: 34px;
   }
 
-  .btn {
-    width: 100%;
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    width: auto;
   }
 
-  .hero-actions {
-    width: 100%;
+  .btn,
+  .hero-actions .btn,
+  .feature-band .btn,
+  .contact-highlight .btn,
+  .buyer-form .btn,
+  form .btn,
+  .nav-links .btn {
+    width: auto;
+    min-width: 190px;
+    max-width: 100%;
+    min-height: 50px;
+    padding: 0 18px;
+    white-space: normal;
+  }
+
+  .nav-links .btn {
+    min-width: 160px;
+  }
+
+  .buyer-form input,
+  .buyer-form select,
+  .buyer-form textarea {
+    font-size: 1rem;
   }
 
   .footer-inner {
