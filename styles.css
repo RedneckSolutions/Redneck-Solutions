@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800&family=Permanent+Marker&display=swap');
+I I@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800&family=Permanent+Marker&display=swap');
 
 :root {
   --black: #000000;
@@ -720,3 +720,57 @@ h1 span {
   }
 }
 
+/* IBC buyer request form */
+
+.buyer-request-section {
+  align-items: stretch;
+}
+
+.buyer-form {
+  display: grid;
+  gap: 12px;
+}
+
+.buyer-form label {
+  color: var(--white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.buyer-form input,
+.buyer-form select,
+.buyer-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 140, 0.35);
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--white);
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.buyer-form input:focus,
+.buyer-form select:focus,
+.buyer-form textarea:focus {
+  border-color: var(--pink);
+  box-shadow: var(--pink-glow);
+}
+
+.buyer-form textarea {
+  resize: vertical;
+}
+
+.buyer-form button {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.form-note {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+}
